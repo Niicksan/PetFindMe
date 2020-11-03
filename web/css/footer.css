@@ -1,0 +1,57 @@
+.footer {
+  background-color: #000;
+  width: 100%;
+  color: white;
+  text-align: left; }
+  .footer .container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em; }
+    .footer .container h4 {
+      padding: 1.3em 0 0.3em 0;
+      color: #1C6375; }
+    .footer .container .about li:hover {
+      color: #1C6375;
+      transition: all 0.15s ease; }
+    .footer .container ul {
+      list-style-type: none;
+      border-top: 1px solid #fff;
+      padding-top: 0.5em; }
+      .footer .container ul li {
+        margin-bottom: 0.25em; }
+      .footer .container ul a {
+        text-decoration: none;
+        color: white; }
+      .footer .container ul .instagram:hover {
+        color: #D3154C;
+        transition: all 0.15s ease; }
+      .footer .container ul .twitter:hover {
+        color: #55ADEE;
+        transition: all 0.15s ease; }
+      .footer .container ul .facebook:hover {
+        color: #3C5A99;
+        transition: all 0.15s ease; }
+      .footer .container .contact ul a:hover {
+        color: #1C6375;
+        transition: all 0.15s ease; }
+  .footer .bottom {
+    text-align: center;
+    margin-top: 1.7em;
+    padding-bottom: 1.7em; }
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-line {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1em;
+  }
+
+  .container ul {
+    border-top: none !important;
+  }
+}

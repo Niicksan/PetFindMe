@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id %}
+
+{% endblock %}
+
+{% block main %}
+    <main class="index">
+        <div class="main-holder">
+            <div class="grid-header">
+                <h1>Моите обяви</h1>
+            </div>
+
+            {% for article in myArticles %}
+                <div class="article-container">
+                    <section class="">
+                        <a href="{{ path('article_view',{'id':article.id}) }}">
+                            <h1 class="">{{ article.title }}</h1>
+                            <img class="img-article" src="../images/{{ article.imageFilename }}" alt="{{ article.title }}">
+
+                            <div class="ad-section-container">
+                                <div class="ad-head-container">
+                                    <p class=""><span class="bold">Статус: </span>{{ article.isFound }}</p>
+                                </div>
+
+                                <div class="ad-main-container">
+                                    <p class="article-content">{{ article.content }}</p>
+                                </div>
+
+                                <div class="ad-footer-container">
+                                    <p class=""><span class="bold">Град: </span>{{ article.town }}</p>
+                                    <p class=""><span class="bold">За връзка: </span>{{ article.author.fullName }}</p>
+                                    <p class=""><span class="bold">Телефон: </span>{{ article.phone }}</p>
+                                    <p><span class="bold">Публикувана: </span><span>{{ article.dateAdded|date("d.m.Y") }}</span></p>
+                                </div>
+                            </div>
+                        </a>
+
+                        {#  <small class="author">
+                            {{ article.author.fullName }}
+                        </small>#}
+
+                        <footer>
+                            <div class="pull-right">
+                                <a class="btn btn-danger btn-xs"
+                                   href="{{ path('article_delete', {'id': article.id}) }}">Изтрий &raquo;</a>
+                            </div>
+
+                            <div class="pull-right">
+                                <a class="btn btn-success btn-xs"
+                                   href="{{ path('article_edit', {'id': article.id}) }}">Редактирай  &raquo;</a>
+                            </div>
+
+                            <div class="pull-right">
+                                <a class="btn btn-default btn-xs"
+                                   href="{{ path('article_view', {'id':article.id}) }}">Преглед &raquo;</a>
+                            </div>
+                        </footer>
+                    </section>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,107 @@
+.index a {
+    color: #0d1318;
+    text-decoration: none;
+}
+
+.index a:hover, a:focus, a:active, a:visited {
+    color: #0d1318;
+    text-decoration: none;
+}
+
+.index {
+    width: 85%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 4em auto 6em;
+}
+
+.grid-header h1 {
+    color: #1C6375;
+    text-align: center;
+    line-height: 1.2em;
+    margin: 1.5em auto;
+}
+
+.grid-container {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    grid-row-gap: 1.3em;
+    grid-column-gap: 1.3em;
+    line-height: 1.2em;
+}
+
+.ad-container {
+    display: grid;
+    grid-template-columns: 39% 58%;
+    grid-column-gap: 1em;
+    align-items: center;
+    -webkit-box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+}
+
+.article-container {
+    align-items: center;
+    -webkit-box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+    padding-bottom: 40px;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+}
+
+.img-article {
+    width: 50% !important;
+}
+
+.ad-section-container {
+    padding: 0.5em 0;
+}
+
+.article-content {
+    width: 70%;
+}
+
+.ad-head-container,
+.ad-main-container,
+.ad-foot-container {
+    margin-bottom: 0.5em;
+}
+
+.ad-head-container .bold,
+.ad-footer-container .bold {
+    color: #1C6375;
+    font-weight: bold !important;
+}
+
+@media screen and (max-width: 580px) {
+  .ad-container {
+    display: grid;
+    grid-template-columns: 100% !important;
+  }
+    .img-article {
+        width: 95% !important;
+    }
+}
+
+@media screen and (max-width: 960px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .ad-container {
+    display: grid;
+    grid-template-columns: 38% 60%;
+  }
+  .grid-container .ad-container:nth-of-type(even) {
+    direction: rtl;
+    text-align: left;
+    padding-left: 0.5em;
+  }
+}

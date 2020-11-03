@@ -1,0 +1,23 @@
+.main-add {
+  background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.9)), url(../images/add.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .main-add .form-holder .add-title h1 {
+    color: #fff;
+    text-align: center;
+    line-height: 1.2em; }
+  .main-add .add #contact-form .form-control::-webkit-input-placeholder {
+    color: #fff; }
+  .main-add .add #contact-form .bgcl {
+    background: rgba(0, 0, 0, 0.75);
+    -webkit-background: rgba(0, 0, 0, 0.75);
+    -moz-background: rgba(0, 0, 0, 0.75);
+    opacity: 0.8; }
+  .main-add .add #contact-form .lost-found {
+    height: 2.2em; }
+  .main-add .add #contact-form .add-file {
+    height: 1.42em; }

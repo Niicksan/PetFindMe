@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal" action="{{ path('home_contacts') }}" method="POST">
+                <fieldset>
+                    <legend>Свържете се с нас</legend>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="contact_name">Вашето име</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="contact_name" placeholder="Вашето име"
+                                   name="contact[name]" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="contact_email">Вашият email</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="contact_email" placeholder="Вашият email"
+                                   name="contact[email]" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="contact_message">Вашето съобщение</label>
+                        <div class="col-sm-4">
+                            <textarea class="form-control" rows="6" id="contact_message"
+                                      name="contact[message]" placeholder="Вашето съощение" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <a class="btn btn-default" href="{{ path('home_index') }}">Назад</a>
+                            <button type="submit" class="btn btn-primary">Изпрати</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}

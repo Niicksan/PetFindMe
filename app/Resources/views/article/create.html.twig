@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal" action="{{ path('article_create') }}" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Добави обява</legend>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_title">Заглавие</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="article_title" placeholder="Заглавие"
+                                   name="article[title]">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_image">Снимка</label>
+                        <div class="col-sm-4 ">
+                            <input type="file" class="form-control" id="article_image" placeholder="Снимка"
+                                   name="article[imageFile]">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="isFound">Изгубен/Намерен</label>
+                        <div class="col-sm-4 ">
+                            <select class="form-control" name="article[isFound]" id="isFound" >
+                                <option value="" selected disabled hidden>Избери</option>
+                                <option value="Изгубен">Изгубен</option>
+                                <option value="Намерен">Намерен</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_town">Град</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="article_town" placeholder="Град"
+                                   name="article[town]">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_phone">Телефон</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="article_phone" placeholder="Телефон"
+                                   name="article[phone]">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_content">Описание</label>
+                        <div class="col-sm-4">
+                            <textarea class="form-control" rows="6" id="article_content"
+                                      name="article[content]" placeholder="Добавете описние"></textarea>
+                        </div>
+                    </div>
+
+                    {{ form_row(form._token) }}
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <a class="btn btn-default" href="{{ path('home_index') }}">Назад</a>
+                            <button type="submit" class="btn btn-primary">Добави</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

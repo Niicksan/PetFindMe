@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'register' %}
+
+{% block main %}
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal" action="{{ path('user_register') }}" method="post">
+                <fieldset>
+                    <legend>Регистрация в PetFind.Me</legend>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="user_email">Имейл</label>
+                        <div class="col-sm-4 ">
+                            <input class="form-control" id="user_email" placeholder="Имейл" name="user[email]" required type="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="user_fullName">Вашето име</label>
+                        <div class="col-sm-4 ">
+                            <input type="text" class="form-control" id="user_fullName" placeholder="Вашето име" name="user[fullName]" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="user_password_first">Парола</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="user_password_first" placeholder="Парола" name="user[password][first]" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="user_password_second">Повторете паролата</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="user_password_second" placeholder="Повторете паролата" name="user[password][second]" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <a class="btn btn-default" href="{{ path('home_index') }}">Назад</a>
+                            <button type="submit" class="btn btn-primary">Регистрация</button>
+                        </div>
+                    </div>
+
+                    {{  form_row(form._token) }}
+                </fieldset>
+            </form>
+        </div>
+    </div>
+{% endblock %}

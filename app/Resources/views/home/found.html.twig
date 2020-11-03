@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <main class="index">
+        <div class="main-holder">
+            <div class="grid-header">
+             <h1>Намерени животни в PetFind.Me</h1>
+            </div>
+
+            {% for article in articles %}
+                <div class="grid-container">
+                    <a href="{{ path('article_view',{'id':article.id}) }}">
+                    <section class="ad-container">
+                        <img src="images/{{ article.imageFilename }}" alt="{{ article.title }}">
+
+                        <div class="ad-section-container">
+                            <div class="ad-head-container">
+                                <h4 class="">{{ article.title }}</h4>
+                                <p class=""><span class="bold">Статус: </span>{{ article.isFound }}</p>
+                            </div>
+
+                            <div class="ad-main-container">
+                                <p class="">{{ article.summary }}</p>
+                            </div>
+
+                            <div class="ad-footer-container">
+                                <p class=""><span class="bold">Град: </span>{{ article.town }}</p>
+                                <p class=""><span class="bold">За връзка: </span>{{ article.author.fullName }}</p>
+                                <p class=""><span class="bold">Телефон: </span>{{ article.phone }}</p>
+                                <p><span class="bold">Публикувана: </span><span>{{ article.dateAdded|date("d.m.Y") }}</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

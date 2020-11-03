@@ -1,0 +1,72 @@
+.contacts {
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(../images/petttttt.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form-holder {
+  width: 58%;
+  margin: 3em auto; }
+  .form-holder .contact-title {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2.5em;
+    transition: all 2.5s ease-in;
+    /*/h2 {
+            font-size: 1.2em;
+        }*/ }
+    .form-holder .contact-title h1 {
+      font-size: 1.8em; }
+  .form-holder .contact-form {
+    background-color: transparent;
+    width: 100%;
+    transition: all 2.5s ease-in; }
+    .form-holder .contact-form .submit {
+      -webkit-box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7);
+      box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.7); }
+    .form-holder .contact-form .form-control {
+      width: 100%;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 1.2em; }
+      .form-holder .contact-form .form-control::-webkit-input-placeholder {
+        color: #fafafa; }
+    .form-holder .contact-form .bgcl {
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0.5;
+      margin-bottom: 0.5em; }
+    .form-holder .contact-form input {
+      height: 3em; }
+    .form-holder .contact-form textarea {
+      box-sizing: border-box;
+      margin-bottom: 0px !important;
+      padding-bottom: 0px !important; }
+    .form-holder .contact-form .submit {
+      background: #1C6375;
+      border-color: transparent;
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-top: 1em;
+      width: 100%; }
+      .form-holder .contact-form .submit:hover {
+        background: #f44336;
+        cursor: pointer; }
+
+@media screen and (max-width: 480px) {
+  .form-holder h1 {
+    font-size: 1.5em; } }
+
+@media screen and (max-width: 960px) {
+  .form-holder {
+    width: 80%; }
+    .form-holder .submit {
+      white-space: normal; } }
